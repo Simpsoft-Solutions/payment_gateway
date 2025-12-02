@@ -121,14 +121,14 @@ payment_gateway/
 Back end (`backend/.env`):
 - `PORT` (optional) — default `5000`
 - `DATABASE_URL` — Postgres connection string (SSL enabled by code)
-- `FRONTEND_URL` — e.g. `http://localhost:5173` (used by CORS & return_url base)
+- `FRONTEND_URL` —  (used by CORS & return_url base)
 - `CASHFREE_APP_ID` — from Cashfree dashboard
 - `CASHFREE_SECRET` — from Cashfree dashboard
 - `CASHFREE_ENV` — `sandbox` or `production`
 - `CASHFREE_WEBHOOK_SECRET` (optional) — if set on Cashfree; falls back to `CASHFREE_SECRET` for signature verification
 
 Front end (`frontend/.env`):
-- `VITE_API_BASE_URL` — base URL of backend, e.g. `http://localhost:5000`
+- `VITE_API_BASE_URL` — base URL of backend.
 
 Note: In `ViewInvoice.jsx` and `PaymentSuccess.jsx` there are hard-coded production URLs. For local/dev or self-hosted deployments, change:
 - `API_BASE` to your backend URL
