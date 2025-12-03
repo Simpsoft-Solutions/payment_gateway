@@ -280,6 +280,21 @@ CREATE TABLE IF NOT EXISTS payments (
 - **Webhook 400 (signature)**: Ensure headers present, webhook secret configured consistently
 - **Invoice not updated after payment**: Use `/api/verify-payment`; confirm webhook is reaching server
 - **Refund stuck in initiating**: Wait for webhook; verify Cashfree dashboard and server logs
+- 
+##Configuration to Cashfree
+
+# --- Cashfree Credentials ---
+CASHFREE_APP_ID=your_cashfree_app_id          # x-client-id
+CASHFREE_SECRET=your_cashfree_secret_key      # x-client-secret
+
+# Cashfree environment:
+#   sandbox     → test mode
+#   production  → live mode
+CASHFREE_ENV=production
+
+# Webhook secret (recommended)
+# Go to Dashboard → Developers → Webhooks → Configure → "Webhook Secret"
+CASHFREE_WEBHOOK_SECRET=your_webhook_secret
 
 Flowchart
 
